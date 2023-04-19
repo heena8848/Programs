@@ -1,0 +1,40 @@
+{% extends 'base.html'%}
+{% block title%}
+signin
+{% endblock%}
+
+
+{% block content%}
+<div style="margin:50px;">
+    <form method="POST">
+        {% csrf_token %} 
+    <div>
+        <div>
+            <label>USERNAME : </label>
+        </div>
+        <div>
+            <input type="text" name="username">
+        </div>
+    </div> 
+
+    
+    <div>
+        <div>
+            <label>PASSWORD : </label>
+        </div>
+        <div>
+            <input type="text" name="password">
+        </div>
+    </div> 
+
+    
+    <div class="button">
+        <input type="submit">
+    </div>
+    </form>
+    <div>
+        <a href="signup">new user? ..Register here..</a>
+    </div>
+
+</div>
+{% endblock%}

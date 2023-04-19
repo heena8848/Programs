@@ -1,0 +1,93 @@
+{% extends 'base.html'%}
+{% load static%}
+{% block content%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <link rel="stylesheet" href="{% static 'style/main.css'%}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <style>
+        /* .m-image {
+            width: 100%;
+            height: 90%;
+            object-fit: fill;
+        } */
+        .carousel-inner>.item>img,
+        .carousel-inner>.item>a>img {
+            width: 640px;
+            height: 360px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/static/posters/python1.jpg" class="d-block w-100 m-image" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Python</h5>
+                    <p>Python is a high-level, general-purpose programming language. Its design philosophy emphasizes
+                        code readability with the use of significant indentation via the off-side rule. Python is
+                        dynamically typed and garbage-collected.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/static/posters/java1.jpg" class="d-block w-100 m-image" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>JAVA</h5>
+                    <p>Java is a high-level, class-based, object-oriented programming language that is designed to have
+                        as few implementation dependencies as possible.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/static/posters/html1.png" class="d-block w-100 m-image" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>HTML</h5>
+                    <p>The HyperText Markup Language or HTML is the standard markup language for documents designed to
+                        be displayed in a web browser. It is often assisted by technologies such as Cascading Style
+                        Sheets and scripting languages such as JavaScript.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/static/posters/c1.png" class="d-block w-100 m-image" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>C#</h5>
+                    <p>C# is a general-purpose high-level programming language supporting multiple paradigms. C#
+                        encompasses static typing, strong typing, lexically scoped, imperative, declarative, functional,
+                        generic, object-oriented, and component-oriented programming disciplines.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev" style="width: 115px;">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next" style="width: 115px;">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</body>
+
+</html>
+{% endblock%}

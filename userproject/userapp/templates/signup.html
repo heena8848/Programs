@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+{% block title%}
+signup
+{% endblock%}
+
+
+{% block content%}
+<div style="margin:50px;">
+    <form method="POST">
+        {% csrf_token %} 
+
+    {% for f in ud%}
+    <div>
+        <div>
+            {{f.field.label}}:
+        </div>
+        <div>
+            {{f}}
+        </div>
+    </div>
+    {%endfor%}
+    <div>
+        <input type="submit">
+    </div>
+    </form>
+</div>
+{% endblock%}
